@@ -5,6 +5,7 @@ import 'package:srl_app/common_widgets/loading_indicator.dart';
 import 'package:srl_app/core/constants/spacing.dart';
 import 'package:srl_app/core/utils/build_context_extensions.dart';
 import 'package:srl_app/domain/models/session_model.dart';
+import 'package:srl_app/presentation/screens/home/widgets/calendar_view.dart';
 import 'package:srl_app/presentation/screens/home/widgets/session_tile.dart';
 import 'package:srl_app/presentation/view_models/home/home_state.dart';
 import 'package:srl_app/presentation/view_models/home/home_view_model.dart';
@@ -36,6 +37,8 @@ class _$HomeScreenState extends ConsumerState<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            const CalendarView(),
+            const VerticalSpace(size: SpaceSize.small),
             Text(
               "Deine Lerneinheiten",
               style: context.textTheme.headlineMedium,
